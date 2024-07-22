@@ -126,8 +126,11 @@ getBinaries() {
             # patch the dogstatsD yaml file to set the aas version for logging path for easier navigation
             sed -i 's\{AAS_LINUX_VERSION}\'"$DD_AAS_LINUX_VERSION"'\g' "${DD_BINARY_DIR}"/dogstatsd.yaml
 
+            echo "Editing datadog.yaml"
             pwd
             echo "\nlogs_enabled: true\n\nlogs:\n  - type: file\n    path: /home/site/wwwroot/logs/file.log\n    service: naus-client-server\n    source: node" >> "${DD_BINARY_DIR}"/datadog.yaml
+            cat "${DD_BINARY_DIR}"/datadog.yaml
+            echo "Done editing datadog.yaml"
 
         else
             echo "Failed to download the Datadog binary succesfully."
