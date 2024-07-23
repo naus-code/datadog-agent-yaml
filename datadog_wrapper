@@ -129,18 +129,19 @@ getBinaries() {
             echo "Editing datadog.yaml"
             pwd
             
-            cat << EOF > "${DD_BINARY_DIR}"/datadog.yaml
-            apm_config:
-              log_file: /home/LogFiles/datadog/v1.10.6/trace-log.txt
-            
-            logs_enabled: true
-            
-            logs:
-              - type: file
-                path: /home/site/wwwroot/logs/file.log
-                service: naus-client-server
-                source: node
-            EOF
+
+cat <<	EOF > "${DD_BINARY_DIR}"/datadog.yaml
+	apm_config:
+	  log_file: /home/LogFiles/datadog/v1.10.6/trace-log.txt
+
+	logs_enabled: true
+
+	logs:
+	  - type: file
+	    path: /home/site/wwwroot/logs/file.log
+	    service: naus-client-server
+	    source: node
+EOF
 
             echo "Done editing datadog.yaml"
 
