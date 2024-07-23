@@ -135,6 +135,8 @@ cat <<	EOF > "${DD_BINARY_DIR}"/datadog.yaml
 	  log_file: /home/LogFiles/datadog/v1.10.6/trace-log.txt
 
 	logs_enabled: true
+	
+	site: datadoghq.eu
 
 	logs:
 	  - type: file
