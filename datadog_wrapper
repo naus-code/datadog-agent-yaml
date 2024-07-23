@@ -141,6 +141,7 @@ getBinaries() {
                 service: naus-client-server
                 source: node
             EOF
+
             echo "Done editing datadog.yaml"
 
         else
