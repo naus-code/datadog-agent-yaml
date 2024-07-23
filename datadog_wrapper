@@ -138,11 +138,6 @@ cat <<	EOF > "${DD_BINARY_DIR}"/datadog.yaml
 	
 	site: datadoghq.eu
 
-	logs:
-	  - type: file
-	    path: /home/site/wwwroot/logs/file.log
-	    service: naus-client-server
-	    source: node
 EOF
 
             echo "Done editing datadog.yaml"
